@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter a number for factorial"
+read n
+
+declare -i ans=1
+
+while [ $n -gt 1 ]
+do 
+  ans=$((ans * n))
+  n=$((n - 1))
+done
+
+echo "Factorial of number is : "$ans
