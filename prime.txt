@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Enter number for prime check : "
+read num
+
+declare check=$((num/2))
+
+for ((i=2; i<=check; i++))
+do 
+  ans=$((num%i))
+  if [ $ans -eq 0 ]
+  then
+    echo "Not prime"
+    exit 0
+  fi
+done
+
+echo "Prime"
